@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique Reloj</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ 
+  <header>
+    <div class="container-header">
+        <img id="logo" src="images/logoB-s.png" alt="">
+        <div class="tr">
+          <div class="input-container">
+            <div class="buscar">
+              <img id="lupa" src="images/lupa.png" alt="">
+              <input placeholder="Buscar" name="buscador" id="searchInput" class="input-field" type="text">
+              <label for="input-field" class="input-label"></label>
+              <span class="input-highlight"></span>
+            </div>
+          </div>
+          
+          <div class="container-card">
+            <main>
+               <div class="shopping">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cartQuantity"class="quantity">0</span>
+            </div>
+            <div class="dropdown">
+              <button class="btnn">Filtrar Precio</button>
+              <div class="dropdown-content">
+                  <button onclick="sortProducts('desc')" class="dropdown-item" type="button" data-order="desc"> Mayor a Menor </button>
+                  <button onclick="sortProducts('asc')" class="dropdown-item" type="button" data-order="asc"> Menor a Mayor </button>
+              </div>
+          </div>
+             
+              <div class="cardh ">
+                <h2>Carrito de Compras</h2>
+                <ul id="listCard">
+                  <!-- Aquí se agregarán dinámicamente los productos en el carrito -->
+                </ul>
+                
+                <div class="total" id="checkOut ">Total: $0 COP</div>
+           
+                <button class="closeShopping">Cerrar Carrito</button>
+              </div>
+            </main>
+            <button id="btnCreate"><img class="agregarProducto" src="images/fotocarrito-s.png"></button>
+            <div class="modal">
+                <button id="close-modal">Cerrar Modal</button>
+                <input type="text" id="new-id" placeholder="ID del producto">
+                <input type="text" id="new-product" placeholder="Nombre del producto">
+                <input type="text" id="new-price" placeholder="Precio del producto">
+                <input type="text" id="new-description" placeholder="Descripción del producto">
+                <input type="text" id="new-category" placeholder="Categoría del producto">
+                <input type="text" id="new-stock" placeholder="Stock del producto">
+                <input type="file" id="new-image" onchange="importImg(event)">
+                <button id="btn-new-create">Crear Producto</button>
+            </div>
+
+  </header>
+  <div>
+    <img class="imgMedioo" src="images/img.PNG" alt="">
+  </div>
+  <nav class="nav" id="nav">
+    <div id="genre-buttons">
+      <ul class="nav-list">
+        <li>
+          <a href="index.html" class="menu__link">
+            <div class="category-container">
+              <img class="size-img" src="images/CatT.png" alt="Todos los productos" >
+              <span><button id="category-name" class="genre-button"
+                  onclick="filterByCategory('Todos los productos')">Todos los productos</button></span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu__link">
+            <div class="category-container">
+              <img class="size-img" src="images/ReLOJCategoriaM.png" alt="Dama" 
+                >
+              <span><button id="category-name" class="genre-button"
+                  onclick="filterByCategory('Dama')">Dama</button></span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu__link">
+            <div class="category-container">
+              <img class="size-img" src="images/RelojCategoriaH.png" alt="Caballero" 
+                >
+              <span> <button id="category-name" class="genre-button"
+                  onclick="filterByCategory('Caballero')">Caballero</button></span>
+            </div>
+
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+ 
+
+
+
+     
+  
+
+ <div class="products-container" class="container"></div>
+  
+    <div class="listCard">
+      <!-- Aquí se agregarán dinámicamente las tarjetas de productos -->
+    </div>
+
+    <!--  
+ <div class="card" data-category="">
+    <div class="box">
+        <div class="card-img"><img class="img3" src="" alt=""></div>
+        <div class="card-info">
+            <p class="text-title"></p>
+            <p class="text-body"></p>
+        </div>
+        <div class="card-footer">
+            <div class="cardd">
+                <span class="text-title" quantity="" ></span>
+                <div class="card-button">
+                    <button  class="addCart">
+                        <img class="imgsize" src="">
+                    </button>
+                </div>
+            </div>
+            <br><br>
+            <div class="c">
+                <p id="size"><span class="disponibles" data-id=""></span></p>
+                <div class="sizeCategory"></div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+  
+  <footer>
+    <p> Boutique Reloj Sofia</p>
+  </footer>
+
+  <script src="js/filter.js"></script>
+  <script src="js/carrusel.js"></script>
+  <script src="js/target.js"></script>
+  <script src="js/busqueda.js"></script>
+  <script src="js/modal.js"></script>
+
+
+</body>
+
+</html>|
